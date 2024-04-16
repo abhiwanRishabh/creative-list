@@ -1,6 +1,6 @@
 # React + Vite
 
-For production environments...
+For dev environments...
 
 ```sh
 npm install
