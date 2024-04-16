@@ -1,0 +1,243 @@
+main {
+   position: relative;
+   overflow: hidden;
+   height: 100dvh;
+}
+
+.main-container {
+   width: 100%;
+}
+
+.filter-container {
+   background-color: rgb(221 220 235);
+   padding: 2rem;
+}
+
+
+.filter-wrapper {
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+}
+
+
+
+.filter-wrapper .wrapper {
+   width: 15rem;
+   /* background-color:rgb(240, 240, 240); */
+   display: flex;
+   flex-wrap: wrap;
+   gap: .7rem;
+}
+
+.filter-wrapper .box,
+.list-items-container>.list-card {
+   background-color: #ffffff86;
+   height: 100px;
+   padding: 1rem 2rem;
+   width: 300px;
+   border-radius: 10px;
+   margin-top: 1rem;
+}
+
+.filter-wrapper>.box>p {
+   font-weight: 500;
+   color: rgb(53, 53, 53);
+}
+
+.filter-by-input input,
+.input-box input {
+   border: none;
+   outline: none;
+   background: rgb(221, 221, 221);
+   /* padding:.75rem 0 .75rem .8rem; */
+   height: 2rem;
+   padding-left: .7rem;
+   border-radius: 10px;
+   outline: 2px solid transparent;
+   width: 100%;
+}
+
+.filter-by-input input:focus {
+   outline: 2px solid rgba(28, 87, 235, 0.471);
+}
+
+
+
+.filter-wrapper-bottom {
+   padding: 1rem 0;
+}
+
+
+.color-circle {
+   width: 1.5rem;
+   height: 1.5rem;
+   border-radius: 50%;
+   outline: 1px solid transparent;
+   transition: outline .2s linear;
+   cursor: pointer;
+}
+
+.color-circle:hover {
+   outline: 2px solid gray;
+   outline-offset: 1px;
+}
+
+
+/* drawer */
+
+.drawer {
+   position: absolute;
+   top: 0;
+   right: 0;
+   height: 100dvh;
+   background-color: rgb(249, 249, 249);
+   box-shadow: 2px 2px 3px 4px lightgray;
+   padding: 1rem;
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+   width: 30%;
+   transform: translateX(600px);
+   transition: transform .4s cubic-bezier(.4, -0.16, .13, 1.12);
+}
+
+
+.drawer .title {
+   font-size: 1.5rem;
+}
+
+.close-icon {
+   width: 90%;
+   display: flex;
+   justify-content: space-between;
+   padding: .5rem .5rem;
+   align-items: center;
+   margin: auto;
+}
+
+.close-icon svg {
+   cursor: pointer;
+}
+
+/* create-button */
+.create-button {
+   display: flex;
+   justify-content: center;
+   font-size: .8rem;
+   padding: .75rem .5rem;
+   /* align-items: center; */
+}
+
+/* input-box */
+
+form {
+   width: 90%;
+   margin: auto;
+}
+
+.input-box {
+   margin-top: 2rem;
+}
+
+.input-box label,
+.select-background p {
+   font-weight: 500;
+   color: rgb(70, 70, 70);
+   font-size: 1.2rem;
+}
+
+.input-box input {
+   width: 80%;
+   background: rgb(236, 236, 236);
+   border-radius: 5px;
+   margin-top: .5rem;
+   padding: 1rem;
+   outline: 2px solid rgba(51, 21, 187, 0.089);
+   transition: all .3s ease;
+   border-bottom: 2px solid rgba(51, 21, 187, 0.486);
+   /* box-shadow: 0px 0px 3px 3px lightgray; */
+}
+
+.input-box input:focus {
+   /* outline-offset: 2px; */
+   outline: 2px solid rgba(51, 21, 187, 0.349);
+}
+
+.select-background-color-container {
+   display: flex;
+   gap: 1rem;
+   margin: 1rem 0;
+}
+
+.form-submit-button {
+   font-size: .8rem;
+   padding: .8rem 2rem;
+}
+
+
+/* list-items-container */
+
+.list-items-container {
+   padding: 2rem;
+   overflow: auto;
+   height: 30rem;
+   width: 60%;
+}
+
+.list-card {
+   outline: 4px solid rgba(211, 211, 211, 0.322);
+}
+
+.list-card .subtitle {
+   color: currentColor
+}
+
+/* progress-bar */
+
+.progress-container {
+    display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.progress-container span{
+   font-weight: 600;
+}
+.progress-bar {
+   width: 400px;
+   height: 1.2rem;
+   outline: 1px solid #505050;
+   border-radius: 10px;
+   background-color: #462ae71f;
+   margin: .8rem 0;
+}
+
+.progress {
+   position: relative;
+   width: 0%;
+   background: hsla(307, 93%, 84%, 1);
+   background: linear-gradient(90deg, rgb(173, 50, 255) 0%, hsla(256, 100%, 62%, 0.5) 80%);
+   height: 100%;
+   border-radius: 10px;
+}
+
+
+/* responsive ness */
+
+@media screen and (min-width : 320px) {
+    .filter-wrapper {
+       flex-direction: column;
+    }
+    .drawer {
+      width: 70%;
+    }
+}
+
+@media screen and (min-width : 1024px) {
+   .filter-wrapper {
+      flex-direction: row;
+   }
+   .drawer {
+      width: 30%;
+   }
+}
