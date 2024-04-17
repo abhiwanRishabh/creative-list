@@ -61,7 +61,7 @@ function CreateListSidebar({ open, colors }) {
 
   const create = () => {
     if (formData?.title === "" || formData?.subtitle === "" || formData?.backgroundColor === "") {
-      toast.error("All fields are mendatory!");
+      toast.error("All fields are mandatory!");
       return;
     }
 

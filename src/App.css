@@ -87,7 +87,7 @@ main {
 /* drawer */
 
 .drawer {
-   position: absolute;
+   position: fixed;
    top: 0;
    right: 0;
    height: 100dvh;
@@ -231,6 +231,13 @@ form {
     .drawer {
       width: 70%;
     }
+    .list-items-container {
+       width: 100%;
+    }
+    main {
+      overflow: auto;
+      height: auto;
+  }
 }
 
 @media screen and (min-width : 1024px) {
@@ -240,4 +247,8 @@ form {
    .drawer {
       width: 30%;
    }
+   main {
+      overflow: hidden;
+      height: 100dvh;
+  }
 }
